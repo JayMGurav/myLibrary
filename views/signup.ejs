@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Signup</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <div class="signContainer secondaryShadow alignContCenter">
+            <form action="/users/signup" method="POST">
+                <% if(errors.username){ %>
+                    <span class="errmsg"><%= errors.username %></span>
+                <% } %>
+                <input class="borderF" type="text" name = "username" required="true" placeholder="Username"/>
+
+                <% if(errors.email){ %>
+                    <span class="errmsg"><%= errors.email %></span>
+                <% } %>
+                <input class="borderF" type="email" name = "email" required="true" placeholder="Email"/>
+                <% if(errors.password){ %>
+                    <span class="errmsg" style="float:left"><%= errors.password %></span>
+                <% } %>
+                <% if(errors.password2){ %>
+                    <span class="errmsg" style="float:right"><%= errors.password2 %></span>
+                <% } %>
+                <input class="borderF signupPass" style="float:left" type="password" name = "password" required="true" placeholder="Password"/>             
+                <input class="borderF signupPass"  style="float: right" type="password" name = "password2" required="true" placeholder="Confirm Password"/>
+    
+                <button class = "relativeAlign signBtn borderF" type="submit">Sign me up</button>
+            </form> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>upload</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <div class="signContainer secondaryShadow alignContCenter">
+        <form action="/upload" method="POST"  enctype="multipart/form-data">
+            <input class="borderF" type="file" id="image" name = "image"  placeholder="Book Image"/>            
+            <input class="borderF" type="file" name = "book" required="true" placeholder="Book"/>
+            <input class="borderF " type="text" name = "ISBN" placeholder="ISBN"/>   
+            <input class="borderF signupPass" style="float:left" type="text" name = "title" required="true" placeholder="Title"/>             
+            <input class="borderF signupPass"  style="float: right" type="text" name = "genre" required="true" placeholder="Genre"/>
+            <button class = "relativeAlign signBtn borderF" type="submit">Upload 👆</button>
+        </form> 
+    </div>
+</body>
+</html>

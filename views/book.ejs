@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/style.css"/>
+        <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    </head>
+    <body>
+        <div class="menuBtn borderF"></div>
+        <div class="header">
+            <div class="head"></div>
+            <div class="floatingCloseBtn circleBtn secondaryShadow">
+                    <a class="floatingActBtn circleBtn"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
+            </div>
+            <div class="menu">
+                    <div class="navitem active">All</div>
+                    <% genres.forEach(function(genre){ %>
+                        <% if(genre == activeGenre){%>
+                        <div class="navitem active"><%=genre%></div>   
+                        <%}else{%>
+                        <div class="navitem"><%=genre%></div>
+                        <%}%>                            
+                    <% })%>
+            </div>
+            <div class="footer">
+                <p>Made with <span style="color: red">❤</span> by Jay</p>
+            </div>
+        </div>
+        <div class="alignContCenter bookSection primaryshadow borderE scrollY">
+        <% if(msg){%>
+            <span class="alignContCenter errmsg"><%= msg %></span>
+        <% } %>
+            <% if(!msg || books.length != 0){%>
+                <div class="masonry ">                
+                    <% for(var i = 0; i < books.length; i++){ %>
+                        <div class="itembook borderE">    
+                            <div class="borderE overflowH">
+                                <div class="paper"></div>
+                                <img class="borderE" aria-hidden="true" src="/upload/image/<%=books[i].image%>">
+                            </div>     
+                            <div class="bookBottom">
+                                <%= books[i].title%> | <%= books[i].genre%>
+                                <div class="bookIco">                                        
+                                    <i class="fa fa-trash delete" value = "<%=books[i]._id%>"></i>
+                                </div>
+                                <i class="open fa fa-arrow-right"></i>                                
+                            </div>
+                        </div>                     
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+
+        <!--add-->
+        <div class="floatingAddBtn circleBtn secondaryShadow">
+                <a class="floatingActBtn circleBtn" href="/upload"><i class="fa fa-plus-circle fa-lg"></i></a>
+        </div>
+        <script src="/javascripts/jquery.min.js"></script>
+        <script src="/javascripts/main.js" async defer></script>
+    </body>
+</html>

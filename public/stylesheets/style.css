@@ -1,0 +1,308 @@
+ body{
+  width:100%;
+  height:100vh;
+  margin:0%;
+  padding: 0%;
+  background: #f2f2f2;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+ }
+ .errmsg{
+  font-size: 20px;
+  font-weight: bold;
+  text-align:center;
+  color: #797979;
+ }
+ li{
+  list-style: none;
+ }
+ .menuBtn{
+   margin: 0%;
+   padding: 0%;
+   position: absolute;
+   width: 10px;
+   height: 60px;
+   top: 8%;
+   left: 0%;
+   background: #6200ee;
+   cursor: pointer;
+ }
+ .alignContCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ }
+ .relativeAlign{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+ .primaryshadow{
+  box-shadow: 2px 8px 20px rgba(0,0,0,0.2);
+ }
+ .secondaryShadow{
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+} 
+ .borderE{
+  border: none;
+  border-radius: 8px;
+ }
+ .borderF{
+  border: none;
+  border-radius: 4px;
+}
+ .scrollY{
+  overflow-y:auto; 
+ }
+ .bookSection{ 
+     display:block;
+     width:90%;
+     height: 88%;
+     align-self: center;
+     background:#fff;
+     transition: all 0.3s ease-in-out; 
+ }
+ .masonry { /* Masonry container */
+    -webkit-column-count: 4;
+    -moz-column-count:4;
+    column-count: 4;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+    margin: 1.5em;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+ }
+ .itembook {
+     position: relative;
+     display: inline-block;
+     background: inherit;
+     padding: 0.3em;
+     margin: 0 0 1.5em;
+     width: 100%;
+     transition: all 0.3s ease-in-out; 
+     box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+ }
+ 
+ .itembook img{
+  max-width:100%;  
+  transition: all 0.2s ease-out;
+ }
+ .overflowH{
+   overflow: hidden;
+ }
+ .paper{          
+   /* //hover effects for book item */
+   display: block;
+   opacity: 0;
+   visibility: hidden;
+   width:40px;
+   height: 40px;
+   background: url('/images/paper1.png');
+   position: absolute;
+   top: 1%;
+   left: 85%;
+   transition-delay: 0.6s;
+   transition: all 0.2s ease-out;
+ }
+ .open{
+  color: #6200ee;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  margin-left: 1%;
+}
+ .itembook:hover .paper{
+  opacity: 1;
+  visibility: visible;
+}
+.itembook:hover .open{
+  opacity: 1;
+  margin-left: 6%;
+}
+
+ .circleBtn{
+  border: none;
+  border-radius: 50%;
+ }
+ .floatingActBtn{
+    text-decoration: none;
+    background: #bb86fc;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle; 
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+ }
+.floatingAddBtn{
+  position: absolute;  
+  top: 84%;
+  left: 88%;
+}
+.header{
+  z-index: 99999;
+  position: absolute ;
+  margin:0%;
+  top:0%;
+  left: -600px;
+  display: block;
+  width:20%;
+  height:100vh;
+  transition: all 0.3s ease-in-out;  
+  background: #fff; 
+}
+.head{
+  height:16%;
+  background: #6200ee;
+}
+.floatingCloseBtn{
+  position: absolute ;
+  top: 12%;
+  left: 64%;
+}
+.menu{
+  width: 100%;
+  height: 60%;
+  margin-top:50px; 
+  overflow-x:hidden;
+  overflow-y: auto;
+  background: inherit; 
+}
+.footer{
+  position: absolute;
+  margin:auto;
+  padding: 0%;
+  bottom: 0%;
+  width: 90%;
+  text-align: center;
+}
+.navitem{
+  width: 100%;
+  padding:4% 6%;
+  color:#797979;
+  font-size: 1.6em;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 1px;
+  background:inherit;
+  transition: all 0.1s ease-in-out;  
+}
+.active{
+  border-left: 6px solid #6200ee;
+  color:#6200ee;
+} 
+.bookBottom{
+  margin-top: 2%;
+  padding:0% 4%;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight:bold;
+  font-size-adjust: initial;
+}
+.bookIco{
+  float: right;
+  font-size: 1.2em;
+  margin-left: 12px;
+  cursor: pointer;
+}
+/* Signin */
+.signContainer{
+  padding:4% ;
+  margin: auto;
+  background: #fff;
+}
+form{
+  margin: auto;
+  padding: 0%;
+  width: 80%;
+  height: 100%;
+}
+form input{
+  height: 40px;
+  width: 96%;
+  margin-bottom: 4%;
+  padding:4px  10px;
+  font-size: 20px;
+  color: #000;
+  background-color:#e4e4e4;
+}
+form .signupPass{
+  width: 40%; 
+} 
+.signBtn{
+  top: 40%;
+  width: 30%;
+  margin-top:6%; 
+  padding: 2%;
+  font-size: 16px;
+  height: 16%;
+  background:  #6200ee;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 320px) {
+.header{  
+  width: 80%;
+  }
+  .floatingActBtn{
+    width: 40px;
+    height: 40px;
+  }
+  .floatingAddBtn{
+    top:82%;
+    left: 74%;
+  }
+  .itembook:hover .paper{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .masonry {
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px){
+  .masonry {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+  }
+  .itembook:hover .paper{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+  .masonry {
+      -moz-column-count: 3;
+      -webkit-column-count: 3;
+      column-count: 3;
+  }
+  .itembook:hover .paper{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .masonry {
+      -moz-column-count: 4;
+      -webkit-column-count: 4;
+      column-count: 4;
+  }
+} 

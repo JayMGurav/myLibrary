@@ -1,0 +1,6 @@
+node_modules
+.env
+*font-awesome-4.7.0
+*mongo
+sim.txt
+*pics

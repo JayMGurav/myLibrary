@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="signContainer secondaryShadow alignContCenter">
+            <form method="POST" action="/users/login">
+                <% if(errors.email){ %>
+                    <span class="errmsg"><%= errors.email %></span>
+                <% } %>
+                <input class="borderF" type="email" name = "email" required="true" placeholder="Email">
+                 <% if(errors.password){ %>
+                    <span class="errmsg"><%= errors.password %></span>
+                <% } %>
+                <input class="borderF" type="password" name = "password" required="true" placeholder="Password">
+                <button class = "relativeAlign signBtn borderF" type="submit">Let me in 👉</button>
+            </form>
+        </div>
+    </body>
+</html>
